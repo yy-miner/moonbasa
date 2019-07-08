@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>梦芭莎登录页面</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>梦芭莎注册页面</title>
+    <link rel="stylesheet" href="css/register.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
+
     <div class="head">
         <p class="headpic">
             <a href="">
@@ -19,33 +20,35 @@
     <div class="main">
         <div class="main_left">
             <img src="http://i0.mbscss.com/img/moonbasa/2018/zf/M10_19_113700.jpg" alt="">
-
         </div>
         <div class="main_right">
             <fieldset style="height:450px">
-                <legend>用户登录</legend>
-                <form action="" method="post" class="log">
+                <legend>用户注册</legend>
+                <form action="http://10.31.158.50/moonbasa/php/register.php" method="post" class="reg">
                     <p style="height: 65px;margin-top:40px">
-                        <input type="text" name="username" class="username" placeholder="手机号/邮箱/会员卡号">
-                        <span></span>
+                        <input type="text" name="username" class="username" placeholder="手机号/邮箱">
+                        <span class="explaina"></span>
                     </p>
                     <p style="height: 65px;margin-top:20px">
                         <input type="password" name="password" class="password" placeholder="密码">
-                        <span></span>
+                        <span class="explainb"></span>
+                    </p>
+                    <p style="height: 65px;margin-top:20px">
+                        <input type="password" name="password" class="passwordtwo" placeholder="确认密码">
+                        <span class="explainc"></span>
                     </p>
                     <p style="height: 30px;margin-top:20px">
-                        <a href="" target="_parent" class="forget-pwd">忘记密码？</a>
-                        <a href="register.html" class="login_reg">注册</a>
+                        <a href="login.html" class="login_reg">登录</a>
                     </p>
                     <p>
-                        <input type="button" value="登录" class="button">
+                        <input type="submit" value="注册并登录" class="submit">
                     </p>
                 </form>
             </fieldset>
         </div>
     </div>
     <script src="script/js/ajax.js"></script>
-    <script src="script/js/login.js"></script>
+    <script src="script/js/register.js"></script>
 </body>
 
 </html>

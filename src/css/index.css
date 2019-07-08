@@ -1,0 +1,734 @@
+
+html,body,div,ul,li,img,input,h2,h3,h4,h5,h6,a,p,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+i{
+    font-style: normal;
+}
+body {
+    color: rgb(85, 85, 85);
+    font-size: 12px;
+    font-family: 宋体;
+    line-height: 22px;
+}
+
+/* 头部顶上 导航条 */
+.header-top{
+    height: 35px;
+    background:#222 url(../img/M4_25_114110.jpg) no-repeat;
+    position: relative;
+}
+.header-topnav{
+    position: absolute;
+    right: 0;
+    top:0;
+    line-height: 35px;
+}
+.header-topnav>li{
+    list-style: none;
+    float: left;
+}
+.header-topnav>li>a{
+    color: #fff;
+
+    padding: 0 10px;
+}
+.header-topnav>li>span{
+    color: #fff;
+}
+
+/* 头部顶上图片栏 */
+.header_topic{
+    width: 1200px;
+    height: 48px;
+    margin: 0px auto; 
+    text-align:center;
+}
+.header_topic a {
+    width:240px;
+    font-size: 0px;
+    line-height: 22px;
+}
+.header_topic img{
+    width:240px;
+    height:48px;
+    border: 0;
+}
+
+/* 头部 logo 搜索栏 */
+.header{
+    width:100%;
+    
+    margin:10px 0 16px 0;
+}
+.header .loginbox{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header .logo {
+    width: 320px;
+    height: 130px;
+    position: relative;   
+    display: inline;
+}
+.header .logo a {
+    background: transparent url(http://i1.mbscss.com/img/moonbasa/2018/ydw/M6_26_100916.jpg) no-repeat scroll center !important;
+    display: block;
+    float: left;
+    height: 129px;
+    width: 320px;
+    margin-top: 0;
+}
+
+.header .logo a.link {
+    position: absolute;
+    width: 157px;
+    height: 37px;
+    left: 88px;
+    top: 68px;
+    background: transparent !important;
+}
+.topani {
+    position: relative;
+    padding: 15px 28px 0 0;
+}
+
+.topani .top_entry {
+    width: 250px;
+}
+
+.topani .top_entry a {
+    border: 1px solid #d9d9d9;
+    color: #000;
+    font-size: 12px;
+    font-family: 宋体;
+    border-left: none;
+    float: left;
+    line-height: 21px;
+    width: 77px;
+    text-align: center;
+}
+
+.topani .top_entry a:first-child {
+    border-left: 1px solid #d9d9d9;
+}
+
+.topani .top_entry a:hover {
+    background: #000;
+    color: #fff;
+}
+.loginmax .loginbox .loginboxleft {
+    background: transparent url(http://i0.mbscss.com/img/moonbasa/2018/ydw/M4_25_114110.jpg) no-repeat -22px top !important;
+}
+
+.loginmax .loginbox .loginboxleft {
+    width: 301px !important;
+    height: 26px !important;
+}
+
+#logininfo {
+    padding: 9px 0px !important;
+
+}
+
+.loginbox #logininfo {
+    padding: 9px 0 !important;
+    color: #ffffff !important;
+}
+
+.loginbox #logininfo span {
+    float: right !important;
+    color: #ffffff !important;
+}
+
+.loginbox .helpmsg,
+.loginbox .Collection {
+
+    padding-top: 6px !important;
+}
+
+.loginbox #logininfo a,
+.loginbox #logininfo a:hover,
+.loginbox .helpmsg a,
+.loginbox .helpmsg a:hover,
+.loginbox a:hover,
+.loginbox .Collection a,
+.cart .cart_bg {
+    color: #ffffff !important;
+}
+
+.cart {
+    background: #222222;
+    padding-top: 3px;
+}
+
+.loginbox #logininfo .mymbs {
+
+    background: #222222 !important;
+    border: 1px solid #222222 !important;
+}
+
+.loginbox #logininfo .mymbs.mymbscss,
+.loginmax {
+    background: #222222 !important;
+    border: #222222 !important;
+}
+
+.loginbox #logininfo .mymbs a,
+.loginbox #logininfo .mymbs a:hover {
+    color: #ffffff !important;
+}
+
+.loginmax {
+    height: 35px !important;
+}
+
+
+/* 搜索栏 */
+.fsearch {
+    width: 540px;
+    height: 35px;
+    line-height: 103px;
+    background: url(http://i3.mbscss.com/img/moonbasa/2015/09/bon/ssbg.jpg) no-repeat;
+    float: left;
+    margin: 30px 0;
+}
+.inp{
+    width: 445px;
+    height: 33px;
+}
+.ac_input {
+    float: left;
+    width: 445px;
+    height: 33px;
+    padding-left: 5px;
+    line-height: 30px;
+    margin: 2px 2px 0 0;
+    color: #b9b9b9;
+    text-indent: 7px;
+}
+.fsearch input{
+    background: 0;
+    border: 0;
+}
+.sub .s{
+    float: right;
+    width: 83px;
+    height: 32px;
+    text-indent: -200px;
+    cursor: pointer;
+}
+
+/* 首页导航栏 */
+/* 首页横排导航 */
+.mymbs_header_con {
+    width: 1200px;
+    margin: 0 auto;
+}
+.mymbs_header{
+    line-height: 44px;
+}
+
+.mymbs_header li{
+    list-style: none;
+    float: left;
+    margin-right: 32px;
+}
+.mymbs_header_con a {
+    color: #727272;
+    text-decoration: none;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    float: left;
+    line-height: 34px;
+    border-bottom: 2px solid transparent;
+}
+/* 商品分类导航 */
+.mymbs_nav{
+    width: 1200px;
+    margin: 0 auto;
+    height: 0;
+    position: relative;
+    font-family: microsoft yahei;
+    z-index: 20;
+}
+.mymbs_nav .nav_con {
+    position: absolute;
+    left: 0;
+    z-index: 20;
+    top: 0;
+}
+.mymbs_nav .nav_con ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 190px;
+    line-height: 20px;
+    background: #fff;
+    padding-bottom: 7px;
+    height: 467px;
+}
+.mymbs_nav .nav_con ul li.li0 {
+    height: 43px;
+    border-bottom: 1px solid #4e4e4e;
+    padding: 0;
+    background: #626262;
+}
+.mymbs_nav .nav_con ul li.li0 img{
+    padding: 0 47px;
+}
+.mymbs_nav .nav_con ul
+{    line-height: 20px;}
+.mymbs_nav .nav_con ul li {
+    padding: 5px 16px 0 35px;
+}
+.mymbs_nav .nav_con ul li:hover .second{
+    display: block;
+}
+.mymbs_nav .nav_con ul h3{
+    margin: 2px 0;
+}
+.mymbs_nav .nav_con ul h3 a {
+color: #000;
+font-size: 17px;
+line-height: 20px;
+}
+
+.mymbs_nav .nav_con ul h4 a {
+    font-family: simsun;
+    color: #8c8c8c;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 38%;
+    display: inline-block;
+    line-height: 16px;
+    padding: 0 1% 0 6%;
+    font-weight: normal;
+}
+.mymbs_nav .nav_con ul li .second {
+    width: 570px;
+    position: absolute;
+    top: 44px;
+    left: 190px;
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    display: none;
+    padding-left: 30px;
+    line-height: 15px;
+    height: 430px;
+}
+
+.mymbs_nav .nav_con ul li .second dl {
+    width: 50%;
+    height: 100px;
+    float: left;
+    padding: 10px 0 5px;
+    
+}
+.mymbs_nav .nav_con ul li .second dl dt {
+    font-weight: 700;
+    margin: 10px 0;
+}
+.mymbs_nav .nav_con ul li .second dt a {
+    color: #000;
+    display: block;
+    position: relative;
+    font-size: 13px;
+}
+.mymbs_nav .nav_con ul li .second dl dd a {
+    color: #000;
+    margin-right: 13px;
+    font-family: simsun;
+    float: left;
+    color: #8d8d8d;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 66px;
+    line-height: 17px;
+    margin-bottom: 4px;
+}
+.haveborder {
+    border-right: 1px solid #f3f3f3;
+}
+
+
+
+
+
+/* 轮播图 */
+.mymbs_banner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+}
+.mymbs_banner .c-li {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* 优选 */
+.optimization{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+.optimization ul{
+    width: 1200px;
+    margin-left: 15px;
+    float: left;
+}
+.optimization li{
+    width: 270px;
+    float: left; 
+    margin-bottom: 13px;
+    margin-right: 28px;
+}
+.optimization li img{
+    width: 100%;
+    height: auto;
+}
+
+.optimization li p{
+    color: #656565;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+}
+.optimization li span{
+    display: block;
+    color: #656565;
+    font-family: Arial;
+    cursor: pointer;
+    text-align: center;
+    line-height: 14px;
+}
+.optimization li i{
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    line-height: 13px;
+    border: 1px solid #000;
+    font-family: Arial;
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 新入驻品牌 */
+.newbrand {
+    width:100%;
+    background:#ffffff url(http://i2.mbscss.com/img/moonbasa/2019/lhs/xxxxxxx.jpg) no-repeat center top;
+}
+.newbrand .lscimgW4{
+    width: 1200px;
+    height: auto;
+    margin: 0px auto;
+    overflow: hidden;
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.newbrand .lscimgW4 .main{
+    width: 1200px;
+    margin-left: 15px;
+    float: left;
+}
+.newbrand .lscimgW4 dl{
+    width: 270px;
+    float: left;
+    margin-bottom: 13px;
+    margin-right: 28px;
+}
+.newbrand .lscimgW4 dt {
+    width: 100%;
+    height: 365px;
+    overflow: hidden;
+}
+.newbrand .lscimgW4 dt img {
+    width: 100%;
+    height: auto;
+}
+.newbrand .lscimgW4 dd .titleW a {
+    color: #656565;
+}
+.newbrand .lscimgW4 dd .iconW{
+    margin-top: 20px;
+}
+.newbrand .lscimgW4 dd .iconW span {
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    line-height: 13px;
+    height: 13px;
+    border: 1px solid #000;
+    font-size: 12px;
+    font-family: Arial;
+    color: #000;
+}
+.newbrand .lscimgW4 dd .priceW {
+    color: #656565;
+    font-family: Arial;
+    margin-top: 9px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 梦芭莎品牌会 */
+/* 自营品牌 */
+.brandclub{
+    width:100%;
+    background:url(http://i1.mbscss.com/img/moonbasa/2019/lhs/M5_17_164048_02.jpg?a) #fff no-repeat top center;
+}
+.brandclub
+.brandclub
+
+
+/* 女装品牌 */
+.girlbrand{
+    width:100%;
+    background:url(http://i4.mbscss.com/img/moonbasa/2019/lhs/xxxxxxx.jpg) #ffffff no-repeat center top;
+}
+.girlbrand
+.girlbrand
+
+/* 内衣品牌 */
+.brabrand{
+   width:100%; 
+   background:#ffffff url(http://i1.mbscss.com/img/moonbasa/2019/lhs/xxxxxxx.jpg) no-repeat center top
+}
+
+/* 更多品牌 */
+.moreclub{
+    width:100%; 
+    background:#ffffff url(http://i2.mbscss.com/img/moonbasa/2019/lhs/xxxxxxx.jpg) no-repeat center top
+}
+
+/* 热卖品类 */
+.hotclass{
+    width:100%; 
+    background:#ffffff url(http://i5.mbscss.com/img/moonbasa/2019/lhs/xxxxxxx.jpg) no-repeat center top
+}
+
+/* 好货推荐 */
+.goodrecommendation{
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav_ydw {
+    width: 1200px;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-family: '微软雅黑';
+}
+
+.nav_ydw a{
+    color: #797979;
+}
+
+.nav_ydw a div {
+    float: left;
+    text-align: center;
+    line-height: 44px;
+    box-sizing: border-box;
+    border: 1px #fd2e42 solid;
+    font-size: 18px;
+    width: 11.6%;
+    margin-right: 1%;
+    color: #fd2e42;
+}
+
+.d11_listnz dl {
+    float: left;
+    background: #fff;
+    margin: 0 12px 30px 0;
+    position: relative;
+    width: 225px;
+}
+.d11_listnz dl .zhekou {
+    width: 165px;
+    font-size: 0;
+    display: none;
+    height: 27px;
+    position: absolute;
+    left: 0;
+    top: 277px;
+    background: url(http://i4.mbscss.com/img/moonbasa/2017/ydw/M8_1_175920.png) no-repeat center top;
+}
+.d11_listnz dl .zhekou p {
+    vertical-align: top;
+    margin-left: 7px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: microsoft yahei;
+    color: #fff;
+    line-height: 27px;
+}
+.rateclass {
+    display: none;
+}
+.d11_listnz dl dt {
+    height: 303px;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+.d11_listnz dl dt img {
+    width: 100%;
+    height: auto;
+    border: 0px;
+}
+.d11_listnz dl dd.d_left {
+    display: block;
+    height: 33px;
+    margin-top: 14px;
+}
+.d11_listnz dl dd {
+    margin: 0;
+    padding: 0;
+    float: left;
+    padding-left: 10px;
+    font-family: microsoft yahei;
+}
+.d11_listnz dl dd a {
+    color: #494949;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.d11_listnz dl dd.d_left span.title {
+    text-align: center;
+    float: left;
+    font-size: 14px;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #6f6f6f;
+    font-family: microsoft yahei;
+}
+.d11_listnz dl dd.d_left span.price {
+    text-align: center;
+    float: left;
+    color: red;
+    font-size: 20px;
+    margin-left: 45px;
+    margin-top: 3px;
+}
+
+/* 更多活动推荐 */
+.ztbannerbg {
+    width: 100%;
+    height: 640px;
+    background: #f7f7f7;
+    overflow: hidden;
+    float: left;
+    
+}
+.ztbanner {
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+}
+.ztbanner .ztbtitle {
+    width: 1200px;
+    margin: 0 auto;
+}
+.ztbanner .banners {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ztbanner .banners ul {
+    width: 1221px;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+.ztbanner .banners li {
+    float: left;
+    width: 384px;
+    height: 213px;
+    border: solid 1px #e3e1e2;
+    margin-right: 20px;
+    margin-top: 20px;
+    background: #FFF;
+}
+.ztbanner .banners li a{
+    color: #797979;
+}
+.ztbanner .banners li img {
+    display: block;
+    width: 384px;
+    height: 181px;
+    border-bottom: solid 1px #e3e1e2;
+    float: left;
+    border: 0; 
+}
+.ztbanner .banners li span {
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 31px;
+    padding-left: 15px;
+    color: #000000;
+}
+
+/* 底部 */
+.footer .m_info .f_infos {
+    width: 1182px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.footer .m_info ul {
+    float: left;
+    padding-bottom: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 0;
+}
+.footer .m_info ul li.lititle {
+    padding-top: 10px;
+}
+.footer .m_info ul li.lititle a {
+    color: #2f2f2f;
+    font-weight: bold;
+}
+.footer .m_info ul li a {
+    color: #7f7f7f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

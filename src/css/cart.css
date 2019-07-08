@@ -1,0 +1,364 @@
+div,p,dl,dt,dd,input{
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    color: #555;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 22px;
+    background: #fff;
+}
+a {
+    color: #797979;
+    text-decoration: none;
+    font-size: 12px;
+}
+dt,dd{
+    float: left;
+}
+/* 头部 */
+.header{
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+.header .logo {
+    width: 196px;
+    height: 107px;
+    float: left;
+    padding-left: 23px;
+}
+.header .practice {
+    float: left;
+    margin: 0 20px;
+}
+.header .practice span {
+    display: inline-block;
+    line-height: 26px;
+    padding: 0 10px 0 12px;
+    color: #747474;
+}
+.stepby {
+    width: 618px;
+    height: 25px;
+    background: url(../img/progressBar.gif);
+    float: left;
+    margin-top: 50px;
+}
+.add, .cancle-edit, .continue, .fl, .minus, .num, .off-shelf-minus {
+    float: left;
+}
+/* 中间加入商品部分 */
+.carmain{
+    margin-top: 50px;
+}
+.carmain .title {
+    width: 1200px;
+    height: 36px;
+    background: #ebebeb;
+    margin: 0 auto;
+    line-height: 47px;
+}
+
+.carbody dt {
+    float: left;
+    padding-left: 40px;
+    width: 40px;
+    line-height: 13px;
+    text-align: center;
+}
+#chkall {
+    margin: 12px 12px 0;
+    width: 13px;
+    height: 13px;
+}
+.carbody dd {
+    
+    text-align: center;
+    height: 36px;
+    color: #414141;
+    font-size: 14px;
+    font-family: "宋体";
+    line-height: 36px;
+}
+.carbody dd.qb {
+    width: 56px;
+    
+}
+.carbody .top dd.sp {
+    width: 440px;
+   
+}
+.carbody .top dd.dj {
+    width: 150px;
+   
+}
+.carbody .top dd.sl {
+    width: 100px;
+   
+}
+.carbody .top dd.jexj {
+    width: 192px;
+   
+}
+.carbody .top dd.cz {
+    width: 58px;
+    text-align: left;
+}
+
+
+/* 加入购物车的商品列表部分 */
+.buygoods {
+    padding-top: 9px;
+    border-top: solid 1px #e1e1e1;
+    border-right: solid 1px #ebebeb;
+    border-bottom: solid 1px #ebebeb;
+    border-left: solid 1px #ebebeb;
+    margin: 0 auto;
+    width: 1198px;
+    overflow: hidden;
+}
+.shop {
+    float: left;
+    margin: 0 auto;
+    width: 1118px;
+}
+
+.shangjia {
+    margin-right: 5px;
+    margin-left: 46px;
+    color: #333;
+    font-size: 12px;
+}
+.yunfei {
+    color: #333;
+}
+.red {
+    color: #d90077;
+    font-weight: 700;
+}
+
+.nr {
+    float: left;
+    margin-left: 0;
+    width: 1118px;
+}
+
+.nr dl {
+    margin: 0 auto;
+    width: 1118px;
+    color: #414141;
+    font-size: 14px;
+    font-family: "宋体";
+}
+.nr dt {
+    float: left;
+    display: block;
+    padding-left: 40px;
+    width: 40px;
+    height: 67px;
+    line-height: 67px;
+}
+.nr dt input {
+    margin: 0 12px;
+    width: 13px;
+    height: 67px;
+}
+.nr .sp {
+    width: 476px !important;
+    line-height: 19px;
+}
+.sp .left {
+    float: left;
+    width: 70px;
+}
+a {
+    color: #797979;
+    text-decoration: none;
+    font-size: 12px;
+}
+.sp .left img {
+    margin: 6px 0 0 10px;
+    width: 39px;
+    height: 53px;
+    border: 1px solid #eeeced;
+}
+.sp .right {
+    float: right;
+    padding: 15px 0;
+    width: 406px;
+}
+.spmc {
+    float: left;
+    width: 406px;
+    color: #5c5c5c;
+    text-align: left;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 18px;
+}
+.goods-link {
+    color: #5B5B5B;
+}
+.nr .dj {
+    display: inline;
+    padding-top: 20px;
+    width: 115px;
+    text-align: center;
+    font-size: 12px;
+}
+.price {
+    width: 115px;
+    height: 18px;
+    color: #000;
+    text-align: right;
+    line-height: 18px;
+}
+.nr dd.sl {
+    padding-top: 20px;
+    padding-left: 70px;
+    width: 95px;
+    text-align: center;
+}
+.add, .minus {
+    float: left;
+    overflow: hidden;
+    width: 18px;
+    height: 24px;
+    border: 1px solid #ebebeb;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+}
+.num {
+    float: left;
+    width: 30px;
+    height: 24px;
+    border-top: solid 1px #ebebeb;
+    border-right: none;
+    border-bottom: solid 1px #ebebeb;
+    border-left: none;
+    text-align: center;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 24px;
+}
+.nr .jexj {
+    padding-top: 20px;
+    width: 118px;
+    color: #d90077;
+    text-align: right;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 20px;
+}
+.nr .cz {
+    position: relative;
+    padding-top: 12px;
+    width: 158px;
+    text-align: center;
+}
+.nr .cz .xiugai {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 50px;
+    height: 24px;
+    color: #000;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 24px;
+}
+.nr .cz .shanchu {
+    margin: 0 auto;
+    height: 18px;
+    color: #a6a6a6;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* 支付部分 */
+.paym {
+    margin: 0 auto;
+    padding-left: 40px;
+    width: 1158px;
+    height: 170px;
+    border-right: solid 1px #ebebeb;
+    border-bottom: solid 1px #ebebeb;
+    border-left: solid 1px #ebebeb;
+}
+.cleargoods {
+    float: left;
+    padding-top: 17px;
+    padding-left: 40px;
+    width: 1118px;
+    height: 40px;
+}
+.goodsmoney {
+    float: left;
+    margin-bottom: 25px;
+    width: 1118px;
+    height: 25px;
+}
+.goodsmoney .zs {
+    text-align: right;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 30px;
+}
+
+.goodsmoney .zs .pics {
+    color: #d90075;
+    font-weight: 700;
+}
+.goodsmoney .zs .zj {
+    font-weight: 700;
+}
+.goodsmoney .zs .rmb {
+    color: #d60076;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.goodsmoney .zs .howmuch {
+    color: #d60076;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.moreorpay {
+    float: left;
+    width: 1118px;
+    height: 40px;
+    text-align: right;
+}
+.moreorpay .qr-code {
+    position: absolute;
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
+.fr {
+    float: right;
+}
+.toSettlement {
+    display: inline-block;
+    width: 226px;
+    height: 48px;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    line-height: 48px;
+}
+.toSettlement {
+    background: #EB0067;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+div,p,a,img{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #555;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 22px;
+    background: #cecccf;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+img{
+    border: 0;
+
+}
+
+/* 头部图片 */
+
+.head{
+    width: 1017px;
+    margin: 0 auto;
+    font-size: 0;
+}
+.headpic{
+    width: 1017px;
+    height: 117px;
+}
+.headpic a, .headpic img{
+    background: #cecccf;
+}
+
+/* 中间部分 */
+.main{
+    width: 1016px;
+    margin: 0 auto;
+    font-size: 0;
+    height: 514px;
+    background-color: #fff;
+}
+
+.main_left, .main_right{
+    float: left;
+    margin: 23px 18px 20px 84px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+/* 中间右边注册部分 */
+legend{
+    font-size: 20px;
+}
+.main_right p{
+    width: 365px;
+    position: relative;
+}
+.main_right p .explaina, .main_right p .explainb, .main_right p .explainc{
+    display: block;
+    height: 22px;
+    clear: both;
+    padding-left: 10px;
+    position: absolute;
+    top: 45px;
+}
+.username, .password, .passwordtwo{
+    width: 322px;
+    height: 40px;
+    border: #c9c9c9 1px solid;
+    padding-left: 10px;
+    line-height: 40px;
+    position: absolute;
+    left: 2px;
+    z-index: 0;
+    border-radius: 4px;
+}a
+.forget-pwd {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: #666;
+}
+.login_reg {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    color: #e50065;
+}
+.submit{
+    width: 322px;
+    height: 40px;
+    border: #e50065 1px solid;
+    background-color: #e50065;
+    padding-left: 0;
+    line-height: 40px;
+    position: absolute;
+    left: 2px;
+    z-index: 0;
+    border-radius: 4px;
+    color: #fff;
+}
+
