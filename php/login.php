@@ -5,7 +5,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
     $user=$_POST['user'];
     $pass=sha1($_POST['pass']);
 
-    $result=$conn->query("select * from loginregister where username='$user' and password='$pass' ");
+    $result=$conn->query("select * from loginregister where username='$user' and password='$pass'");
 
     if($result->fetch_assoc()){
         echo true;

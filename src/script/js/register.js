@@ -1,8 +1,7 @@
 ; !function () {//注册
     const $username = $('.reg .username');
+    const $password = $('.password');
     const $spana = $('.explaina');
-    const $spanb = $('.explainb');
-    const $spanc = $('.explainc');
     const $submit = $('.reg .submit');
     let $usernameflag = true;
 
@@ -15,21 +14,22 @@
             data: {
                 name: $username.val()
             }
-        }).then(function (d) {
-            if (!d) {   //不存在 提示√
-                $spana.html('√');
-                $spana.css("color ", "green");
-                $usernameflag = true;
-            } else {   //存在 提示已存在 阻止提交
+        }).done(function (d) {
+            if (d) {  //存在 提示已存在 阻止提交 
                 $spana.html('已存在！');
-                $spana.css({ "color ": "red" });
+                $spana.css("color ", "red");
                 $usernameflag = false;
+            } else {   //不存在 提示√
+                $spana.html('√');
+                $spana.css({ "color ": "green" });
+                $usernameflag = true;
             }
         });
     });
 
     //点击注册按钮  阻止提交时用户名获得焦点
     $submit.on('click', function () {
+        alert(11);
         if (!$usernameflag) {
             $username.focus();
             return false;
