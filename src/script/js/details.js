@@ -1,3 +1,4 @@
+//商品小图列表效果
 ; !function ($) {
     function setcookie(key, value, day) {
         let date = new Date();
@@ -87,6 +88,49 @@
             buffermove($movelistUl, { left: -(num - 5) * liwidth });
         }
     })
+    //放大镜效果
+    const $tp = $('#mediumContainer')
+    const $xli = $('#img_x li');
+    const $magnifier = $('#magnifier');
+    const $zz = $('#zhezhao');
+    const $u = $('#img_u');
+    const $uimg = $('#img_u img');
+
+    $tp.on('mousemove', function (e) {
+        $u.show();
+        $magnifier.show();
+        var left = e.offsetX - parseInt($magnifier.width()) / 2;
+        var top = e.offsetY - parseInt($magnifier.height()) / 2;
+        left = left < 0 ? 0 : left;
+        left = left > (parseInt($zz.outerWidth()) - parseInt($magnifier.outerWidth())) ? (parseInt($zz.outerWidth()) - parseInt($magnifier.outerWidth())) : left;
+        top = top < 0 ? 0 : top;
+        top = top > (parseInt($zz.outerHeight()) - parseInt($magnifier.outerHeight())) ? (parseInt($zz.outerHeight()) - parseInt($magnifier.outerHeight())) : top;
+
+        $magnifier.css('left', left + 'px');
+        $magnifier.css('top', top + 'px');
+
+        var leftRate = left / parseInt($zz.outerWidth());
+        var bigLeft = leftRate * parseInt($uimg.outerWidth());
+        $uimg.css('margin-left', -bigLeft + 'px');
+
+        var topRate = top / parseInt($zz.outerHeight());
+        var bigTop = topRate * parseInt($uimg.outerHeight());
+        $uimg.css('margin-top', -bigTop + 'px');
+    })
+    $zz.on('mouseout', function () {
+        $u.hide();
+        $magnifier.hide();
+    })
+
+    $xli.hover(function () {
+        $(this).css('border', '2px solid coral').siblings().css('border', '2px solid transparent');
+        $('#mediumContainer img').eq(0).attr('src', 'http://img3m3.ddimg.cn/2/21/22628333-' + ($(this).index() + 1) + '_w_2.jpg');
+        $uimg.eq(0).attr('src', 'http://img3m3.ddimg.cn/2/21/22628333-' + ($(this).index() + 1) + '_u_2.jpg');
+    })
+}(jQuery);
+
+//放大镜效果
+; !function ($) {
 
 
 }(jQuery);

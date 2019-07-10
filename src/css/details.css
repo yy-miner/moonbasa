@@ -127,13 +127,14 @@ a{
     text-align: center;
 }
 
-/* 中间内容 */
+/* 中间内容部分 */
 .main-middle{
     position: relative;
-}
-.details{
     width: 1200px;
     margin: 0 auto;
+    margin-top: 30px;
+}
+.details{
     position: absolute;
     top: 0;
     left: 0;
@@ -166,18 +167,30 @@ a{
     display: none;
 }
 /* 商品图片 */
-.scale{
-    float: left;
-    cursor: default;
+.scale{   
+    width:380px;
+    height: 513px;
+    border: #dfdada 1px solid;
+    cursor: pointer;
+    position: relative;
 }
-
-
+#magnifier img{
+    cursor: pointer;
+}
+#magnifier{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 9;
+}
 
 
 /* 图片列表 */
 .icolist{  
     width: 380px;
-    height: 150px;
+    height: 80px;
     margin-top: 20px;
     
 }
@@ -186,7 +199,7 @@ a{
 }
 .movelist{
     width: 332px;
-    height: 62px;    
+    height: 80px;    
     overflow: hidden;
     position: relative;
 }
@@ -204,7 +217,8 @@ a{
 }
 .movelist li img{
     width: 50px;
-    height: 68px;    
+    height: 68px; 
+    cursor: pointer;   
 }
 .icoleft {
     width: 24px;
