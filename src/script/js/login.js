@@ -1,5 +1,5 @@
-
-; !function () {//登录
+//登录
+; !function () {
 	const $username = $('.log .username');
 	const $password = $('.log .password');
 	const $btn = $('.log .button');

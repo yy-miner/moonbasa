@@ -106,7 +106,12 @@ dt,dd{
     width: 58px;
     text-align: left;
 }
-
+.cz .delete{
+    font-size: 16px;
+    line-height: 36px;
+    color: #EB0067;
+    cursor: pointer;
+}
 
 /* 加入购物车的商品列表部分 */
 .buygoods {
@@ -348,10 +353,10 @@ a {
     text-align: center;
     font-size: 22px;
     line-height: 48px;
-}
-.toSettlement {
+    cursor: pointer;
     background: #EB0067;
 }
+
 
 
 

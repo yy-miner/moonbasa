@@ -1,0 +1,283 @@
+html,body,div,ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.loginInfo_wrap {
+    width: 100%;
+    position: relative;
+    left: 0;
+    background: #f5f5f5;
+    height: 29px;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 9000;
+}
+.loginInfo_out {
+    width: 1160px;
+    height: 26px;
+    color: #999;
+    margin: 0 auto;
+    padding-right: 16px;
+    z-index: 2;
+}
+.loginInfo_l {
+    float: left;
+}
+.loginInfo_l li, .loginInfo_r li {
+    float: left;
+    height: 29px;
+    padding: 0 5px;
+}
+.lineHeight {
+    line-height: 30px;
+}
+.lw_home_icon {
+    background: url(http://i7.mbscss.com/img/moonbasa2/item/btn_03.png) no-repeat center;
+    position: relative;
+    top: 8px;
+    float: left;
+    left: -2px;
+}
+.loginInfo_out a {
+    color: #999;
+    
+    font-size: 12px;
+}
+.lw_100_icon {
+    width: 18px;
+    height: 18px;
+    background: url(http://i1.mbscss.com/img/moonbasa2/item/btn_05.png) no-repeat center;
+    background-size: 100%;
+    position: relative;
+    top: 6px;
+    float: left;
+    left: -2px;
+    margin-left: 5px;
+}
+.loginInfo_r {
+    float: right;
+}
+.lw_separator {
+    color: #d1d1d1;
+}
+.loginInfo_wrap .loginInfo_out .loginInfo_r .lw_weixin_li .lw_weixin .twoCode {
+    left: -120px;
+}
+.twoCode {
+    position: absolute;
+    top: 26px;
+    left: -75px;
+    z-index: 100;
+    display: none;
+}
+.weibo_twoCode {
+    position: absolute;
+    top: 26px;
+    left: -75px;
+    z-index: 100;
+    display: none;
+}
+.mobile_twoCode {
+    position: absolute;
+    top: 26px;
+    left: -75px;
+    z-index: 100;
+    display: none;
+}
+
+
+.header-logo{
+    height: 100px; width: 100%; background: url('http://i2.mbscss.com/img/moonbasa2/item/b-Lingerie.jpg') center
+}
+
+
+/* 中间部分 */
+/* 导航栏 */
+.main{
+    margin: 0 auto;
+    border-top: 2px solid #e10164;
+}
+.main-nav{
+    position: relative;
+    margin: 0px auto;
+    width: 1200px;
+    height: 35px;      
+    background: #fff;
+    font-family: 宋体;
+    font-weight: bold;
+    font-size: 12px;
+       
+}
+.main-nav ul li {
+    display: inline-block;
+    line-height: 35px;
+    position: relative;
+    width: 90px;
+    margin-right: 7px;
+}
+.main-nav ul li a {
+    display: inline-block;
+    width: 85px;
+    text-align: center;
+}
+
+/* 中间内容 */
+.main-middle{
+    position: relative;
+}
+.details{
+    width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.details_left{
+    width: 431px;
+    padding: 8px 0 14px;
+}
+
+.details_right{
+    display: inline-block;
+    width: 543px;
+    padding: 0 55px 10px 14px;
+    color: #6a6a6a;
+    min-height: 625px;
+    border-right: 1px solid #E8E8E8;
+    margin-top: 32px;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 0;
+    left: 450px;
+}
+.imgRight{
+    width: 385px;
+    height: 520px;
+    z-index: 999;
+    position: absolute;
+    top: 8px;
+    left: 400px;
+    display: none;
+}
+/* 商品图片 */
+.scale{
+    float: left;
+    cursor: default;
+}
+
+
+
+
+/* 图片列表 */
+.icolist{  
+    width: 380px;
+    height: 150px;
+    margin-top: 20px;
+    
+}
+.movelist, .icoleft , .icoright{
+    float: left;
+}
+.movelist{
+    width: 332px;
+    height: 62px;    
+    overflow: hidden;
+    position: relative;
+}
+.movelist ul{
+    position: absolute;
+    left:0px;
+    top:0px;
+    padding-left: 5px;
+}
+.movelist li{
+    float: left;
+    padding:0 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.movelist li img{
+    width: 50px;
+    height: 68px;    
+}
+.icoleft {
+    width: 24px;
+    height: 79px;
+    cursor: pointer;
+    background: url(http://i2.mbscss.com/img/moonbasa2/20151209/slon.png) no-repeat 0 26px;
+}
+.icoright {
+    width: 24px;
+    height: 79px;
+    cursor: pointer;
+    background: url(http://i2.mbscss.com/img/moonbasa2/20151209/sron.png) no-repeat 10px 26px;
+}
+
+
+/* 右边购物 */
+.addcart_bt_payment #collect {
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid #E40165;
+    color: #e70164;
+}
+.addcart_bt_payment span {
+    float: left;
+    width: 204px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+}
+.addcart_bt_payment .spanAddCart {
+    background: #e50065;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+    border: 1px solid #e50065;
+}
+
+
+.details_right .title{
+    width: 100%;
+    overflow: hidden;
+    color: #1c1c1c;
+    font-family: 'Microsoft Yahei';
+    font-weight: 400;
+    font-size: 30px;
+}
+.details_right .price{
+    font-weight: 500;
+    font-family: Arial;
+    margin: 20px 0;
+    margin-left: 6px;
+    color: #e50065;
+    font-size: 48px;
+    line-height: 48px;
+    
+}
+.details_right .goodsnum{
+    height: 48px;
+    margin: 30px 0;
+}
+.details_right .goodsnum input{
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+

@@ -359,23 +359,71 @@ line-height: 20px;
 }
 
 
-
-
-
 /* 轮播图 */
+
 .mymbs_banner {
     width: 100%;
+    height: 430px;
+    position: relative;
     margin: 0 auto;
-    position: relative;
-    height: 430px;
-    overflow: hidden;
 }
-.mymbs_banner .c-li {
-    width: 100%;
-    height: 430px;
-    overflow: hidden;
-    position: relative;
+
+.mymbs_banner ul li {
+    width: 1920px;
+    margin-left: -900px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
 }
+.mymbs_banner ul li.pic{
+    opacity: 1;
+}
+.mymbs_banner ol {
+    position: absolute;
+    width: 180px;
+    height: 20px;
+    margin-left: -90px;
+    bottom: 20px;
+    right: 30px;
+}
+
+.mymbs_banner ol li {
+    float: left;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.mymbs_banner ol li.bg {
+    background: #fff;
+}
+
+/* .mymbs_banner .right,
+.mymbs_banner .left {
+    font-size: 80px;
+    color: #fff;
+    font-family: verdana;
+    position: absolute;
+    text-decoration: none;
+    top: 120px;
+    display: none;
+}
+
+.mymbs_banner .left {
+    left: 20px;
+}
+.mymbs_banner .right {
+    right: 20px;
+}
+
+.mymbs_banner .right:hover,
+.mymbs_banner .left:hover {
+    color: #000;
+} */
+
 
 
 /* 优选 */

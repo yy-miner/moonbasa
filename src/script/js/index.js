@@ -1,66 +1,62 @@
-// ; !function ($) {
-// 	//梦芭莎优选区块  商品渲染
-// 	const $optimization = $('.optimization');
-// 	$.ajax({
-// 		url: 'http://10.31.158.50/moonbasa/php/optimization.php',
-// 		dataType: 'json',
-// 		success: function (oplist) {
-// 			let htmlstr = '<ul>';
-// 			for (let i = 0; i < oplist.length; i++) {
-// 				htmlstr += `
-// 			        <li>
-// 			           <a href="details.html?sid=${oplist[i].picid}">
-// 						<img src="${oplist[i].url}"/>
-// 						<i>NEW</i>
-// 			            <p>${oplist[i].title}</p>
-// 			            <span>￥${oplist[i].price}</span>
-// 			           </a> 
-// 			        </li>
-// 			    `;
-// 			}
-// 			htmlstr += '</ul>';
-// 			$optimization.innerHTML = htmlstr;
-// 		}
-// 	});
+
+; !function () {
+    let $i = 0;
+    let Timer;
+    $(function () {
+        //自动轮播
+        $(".picImg").eq(0).show().siblings().hide();
+        TimerBanner();
+
+        $(".tabs li").hover(function () {
+            $i = $(this).index();
+            clearInterval(Timer);
+            showPic();
+        }, function () {
+            TimerBanner();
+        });
+    });
+
+    function TimerBanner() {
+        Timer = setInterval(function () {
+            $i++;
+            if ($i == 5) {
+                $i = 0;
+            }
+            showPic()
+        }, 3000);
+    }
+    //显示图片
+    function showPic() {
+        $(".picImg").eq($i).show().siblings().hide();
+        $(".tabs li").eq($i).addClass("bg").siblings().removeClass("bg");
+    }
+}();
 
 
 
 
-//banner数据
-// 	$.ajax({
-// 		url: 'php/banner.php',
-// 		dataType: 'json'
-// 	}).done(function (bannerdata) {
-// 		$.each(bannerdata, function (index, value) {
-// 			var $bannerstr = '<ul>';
-// 		});
-// 	});
+; !function ($) {
+    //梦芭莎优选区块  商品渲染
 
-// 	//lunbo数据
-// 	$.ajax({
-// 		url: 'php/banner.php',
-// 		dataType: 'json'
-// 	}).done(function (bannerdata) {
-// 		$.each(bannerdata, function (index, value) {
-// 			var $bannerstr = '<ul>';
+    $.ajax({
+        url: 'http://10.31.158.50/moonbasa/php/optimization.php',
+        dataType: 'json'
+    }).done(function (oplist) {
+        const $optimization = $('.optimization ul');
+        let htmlstr = '';
+        $.each(oplist, function (ind, val) {
+            htmlstr += `
+			        <li>
+			           <a href="details.html?sid=${val.picid}">
+						<img src="${val.url}"/>
+						<i>NEW</i>
+			            <p>${val.title}</p>
+			            <span>￥${val.price}</span>
+			           </a> 
+                    </li>
+                    `;
+        });
+        $optimization.html(htmlstr);
+    });
+}(jQuery);
 
-// 		});
-// 	});
-// 	//tab切换数据
-// 	$.ajax({
-// 		url: 'php/banner.php',
-// 		dataType: 'json'
-// 	}).done(function (bannerdata) {
-// 		$.each(bannerdata, function (index, value) {
-// 			var $bannerstr = '<ul>';
-
-// 		});
-// 	});
-
-// }(jQuery);
-// };
-
-// !function () {
-// 	//小效果
-
-// }(jQuery);
