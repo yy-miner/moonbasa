@@ -1,40 +1,31 @@
 //商品小图列表效果
 ; !function ($) {
-    function setcookie(key, value, day) {
-        let date = new Date();
-        date.setDate(date.getDate() + day);
-        document.cookie = key + '=' + encodeURI(value) + ';expires=' + date;
-    }
-
-    function getcookie(key) {
-        let arr = decodeURI(document.cookie).split('; ');
-        for (let i = 0; i < arr.length; i++) {
-            let newarr = arr[i].split('=');
-            if (newarr[0] === key) {
-                return newarr[1];
-            }
-        }
-    }
-
-    function delcookie(key) {
-        setcookie(key, '', -1);
-    }
-
 
     let sid = location.search.split('=')[1];
-    const $spic = $('.movelist .spic');
-    const $bpic = $('.movelist .bpic');
-    const $sf = $('.movelist .sf');
-    const $bf = $('.movelist .bf');
+
     const $title = $('.movelist .title');
     const $price = $('.movelist .price');
     const $movelistul = $('.movelist ul');
-    const $details = $('.movelist .details');
+
+    const $details = $('.details');
     const $left = $('.icoleft');
     const $right = $('.icoright');
+
+
+    const $tp = $('#mediumContainer');//小图  
+    const $sff = $('#magnifier');//小放
+    const $uimg = $('#img_u img');//大图
+    const $imgr = $('#imgright');//大放
+
+    const $xli = $('#img_x li');
+    const $zz = $('#zhezhao');
+    const $u = $('#img_u');
+
+
+    const $goodsnumcount = $('.goodsnum input');
+    const $linkbox = $('.linkbox');
     const $btn = $('.spanAddCart');
-
-
+    const $close = $('.linkbox span');
 
     /* 图片列表 */
     $.ajax({
@@ -44,9 +35,9 @@
             picid: sid
         }
     }).done(function (oplist) {
-        $spic.find('img').attr('src', oplist.url);
-        $bpic.find('img').attr('src', oplist.url);
-        $spic.attr('sid', oplist.sid);
+        $tp.find('img').attr('src', oplist.url);
+        $imgr.find('img').attr('src', oplist.url);
+        $tp.attr('sid', oplist.sid);
         $title.html(oplist.titile);
         $price.html(oplist.price);
         var arr = oplist.imgurls.split(',');
@@ -58,79 +49,125 @@
     });
 
     //鼠标经过图片列表的图片时将对应的图片显示到小图上
-    $movelistul.hover(function (ev) {
+    const $ulli = $('.movelist ul li');
+
+    $movelistul.on('click', 'img', function (ev) {
         var ev = ev || window.event;
         let ele = ev.target || ev.srcElement;
 
-        if (ele.parentNode.nodeName == 'LI') {
-            let imgurl = ele.parentNode.querySelector('img').src;
-            $spic.find('img').attr("src", "imgurl");
-            $bpic.attr("src", "imgurl");
-        }
+        let imgurl = ele.parentNode.querySelector('img').src;
+
+        $tp.find('img').attr("src", imgurl);
+        $uimg.attr("src", imgurl);
+
     });
 
-    //点击图片列表的左右箭头
-    let num = 5;
-    $right.on('click', function () {
-        let icolist = $movelistul.find('li');
-        let liwidth = icolist.offsetWidth + 5;
-        if (icolist.length > num) {
-            num++;
-            buffermove($movelistul, { left: -(num - 5) * liwidth });
-        }
-    });
 
-    $left.on('click', function () {
-        let icolist = $movelistul.find('li');
-        let liwidth = icolist.offsetWidth + 5;
-        if (num > 5) {
-            num--;
-            buffermove($movelistUl, { left: -(num - 5) * liwidth });
-        }
-    })
     //放大镜效果
-    const $tp = $('#mediumContainer')
-    const $xli = $('#img_x li');
-    const $magnifier = $('#magnifier');
-    const $zz = $('#zhezhao');
-    const $u = $('#img_u');
-    const $uimg = $('#img_u img');
+    // const $tp = $('#mediumContainer');//小图  
+    // const $sff = $('#magnifier');//小放
+    // const $uimg = $('#img_u img');//大图
+    // const $imgr = $('#imgright');//大放
 
-    $tp.on('mousemove', function (e) {
-        $u.show();
-        $magnifier.show();
-        var left = e.offsetX - parseInt($magnifier.width()) / 2;
-        var top = e.offsetY - parseInt($magnifier.height()) / 2;
-        left = left < 0 ? 0 : left;
-        left = left > (parseInt($zz.outerWidth()) - parseInt($magnifier.outerWidth())) ? (parseInt($zz.outerWidth()) - parseInt($magnifier.outerWidth())) : left;
-        top = top < 0 ? 0 : top;
-        top = top > (parseInt($zz.outerHeight()) - parseInt($magnifier.outerHeight())) ? (parseInt($zz.outerHeight()) - parseInt($magnifier.outerHeight())) : top;
+    //鼠标经过小图
+    $tp.hover(function () {
+        $sff.show(); //sf 显示
+        $imgr.show(); //bf 显示
 
-        $magnifier.css('left', left + 'px');
-        $magnifier.css('top', top + 'px');
+        $(this).on('mousemove', function (ev) {
+            var ev = ev || window.event;
+            $sff.width($imgr.width() * $tp.width() / $uimg.width());
+            $sff.height($imgr.height() * $tp.height() / $uimg.height());
 
-        var leftRate = left / parseInt($zz.outerWidth());
-        var bigLeft = leftRate * parseInt($uimg.outerWidth());
-        $uimg.css('margin-left', -bigLeft + 'px');
+            let l = ev.clientX - $details.offset().left - $sff.width() / 2;
+            let t = ev.clientY - $details.offset().top - $sff.height() / 2;
 
-        var topRate = top / parseInt($zz.outerHeight());
-        var bigTop = topRate * parseInt($uimg.outerHeight());
-        $uimg.css('margin-top', -bigTop + 'px');
-    })
-    $zz.on('mouseout', function () {
-        $u.hide();
-        $magnifier.hide();
-    })
+            if (l < 0) {
+                l = 0;
+            } else if (l >= $tp.width() - $sff.width()) {
+                l = $tp.width() - $sff.width();
+            }
 
-    $xli.hover(function () {
-        $(this).css('border', '2px solid coral').siblings().css('border', '2px solid transparent');
-        $('#mediumContainer img').eq(0).attr('src', 'http://img3m3.ddimg.cn/2/21/22628333-' + ($(this).index() + 1) + '_w_2.jpg');
-        $uimg.eq(0).attr('src', 'http://img3m3.ddimg.cn/2/21/22628333-' + ($(this).index() + 1) + '_u_2.jpg');
+            if (t < 0) {
+                t = 0;
+            } else if (t >= $tp.height() - $sff.height()) {
+                t = $tp.height() - $sff.height() - 8;
+            }
+
+            $sff.css('left', l);
+            $sff.css('top', t);
+
+            let bili = $uimg.width() / $tp.width();//比例=大图/小图
+            $uimg.css('left', -l * bili);
+            $uimg.css('top', -t * bili);
+        });
+
+    }, function () {//鼠标移出图片位置，放大镜效果消失
+        $imgr.hide();
+        $sff.hide();
+    });
+
+
+
+
+    function setcookie(key, value, day) {
+        let date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = key + '=' + encodeURI(value) + ';expires=' + date;
+    };
+
+    function getcookie(key) {
+        let arr = decodeURI(document.cookie).split('; ');
+        for (let i = 0; i < arr.length; i++) {
+            let newarr = arr[i].split('=');
+            if (newarr[0] === key) {
+                return newarr[1];
+            }
+        }
+    };
+
+    function delcookie(key) {
+        setcookie(key, '', -1);
+    };
+
+    function cookievalue() {
+        if (getcookie('cookiesid') && getcookie('cookienum')) {
+            arrsid = getcookie('cookiesid').split(',');
+            arrnum = getcookie('cookienum').split(',');
+        }
+    };
+    // const $goodsnumcount = $('.goodsnum input');
+    // const $linkbox = $('.linkbox');
+    // const $btn = $('.spanAddCart');
+    // const $close = $('.linkbox span');
+
+    // 点击添加购物车按钮效果
+    let arrsid = [];
+    let arrnum = [];
+    $btn.on('click', function () {
+        cookievalue();
+        let sid = window.location.search.slice(5);
+        // console.log(arrsid.indexOf(sid));
+
+        console.log($goodsnumcount.val());
+        if (arrsid.indexOf(sid) === -1) {//不存在的话就存到cookie
+
+
+            arrsid.push(sid);
+            arrnum.push($goodsnumcount.val());
+            setcookie('cookiesid', arrsid.toString(), 10);
+            setcookie('cookienum', arrnum.toString(), 10);
+        } else {//存在的话就把数量累计
+            let sum = Number(arrnum[arrsid.indexOf(sid)]) + Number($goodsnumcount.val());
+            arrnum[arrsid.indexOf(sid)] = sum;
+            setcookie('cookienum', arrnum.toString(), 10);
+        }
+
+        $linkbox.show();
+    });
+
+    $close.on('click ', function () {
+        $linkbox.hide();
     })
 }(jQuery);
 
-//放大镜效果
-; !function ($) {
-
-
-}(jQuery);

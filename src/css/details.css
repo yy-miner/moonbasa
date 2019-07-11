@@ -158,38 +158,43 @@ a{
     left: 450px;
 }
 .imgRight{
-    width: 385px;
-    height: 520px;
+    width:480px;
+    height: 613px;
     z-index: 999;
     position: absolute;
     top: 8px;
     left: 400px;
     display: none;
+    overflow: hidden;
+}
+.bpic{
+    width:480px;
+    height: 613px;
+    overflow: hidden;
 }
 /* 商品图片 */
-.scale{   
-    width:380px;
-    height: 513px;
-    border: #dfdada 1px solid;
-    cursor: pointer;
+
+#mediumContainer{
     position: relative;
-}
-#magnifier img{
-    cursor: pointer;
+    width:385px;
+    height: 520px;
 }
 #magnifier{
-    display: none;
-    cursor: pointer;
+    width:100px;
+    height: 100px;
     position: absolute;
-    left:0;
-    top: 0;
-    z-index: 9;
+    background: orange;
+    opacity: 0.3;
+    left:0px;
+    top:0px;
+    display: none;
+    cursor: move;
 }
 
 
 /* 图片列表 */
 .icolist{  
-    width: 380px;
+    width: 385px;
     height: 80px;
     margin-top: 20px;
     
@@ -198,26 +203,24 @@ a{
     float: left;
 }
 .movelist{
-    width: 332px;
+    width: 380px;
     height: 80px;    
     overflow: hidden;
     position: relative;
+    margin-left: 8px;
 }
 .movelist ul{
     position: absolute;
     left:0px;
     top:0px;
-    padding-left: 5px;
 }
 .movelist li{
     float: left;
-    padding:0 5px;
-    margin-right: 5px;
+    margin-right: 16px;
     margin-top: 5px;
 }
 .movelist li img{
-    width: 50px;
-    height: 68px; 
+    width: 60px;
     cursor: pointer;   
 }
 .icoleft {
@@ -270,8 +273,7 @@ a{
 .details_right .price{
     font-weight: 500;
     font-family: Arial;
-    margin: 20px 0;
-    margin-left: 6px;
+    margin: 30px 0;
     color: #e50065;
     font-size: 48px;
     line-height: 48px;
@@ -287,8 +289,42 @@ a{
     font-size: 30px;
 }
 
-
-
+/* 购物车小弹窗 */
+.linkbox{
+    width:280px;
+    height:180px;
+    position: absolute;
+    left:40%;
+    top:50%;
+    margin:-100px 0 0 -150px;
+    display: none; 
+    background: rgb(241, 238, 241);
+}
+.linkbox h4{  
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+.linkbox a{
+    display: block;
+    font-size: 20px;
+    margin:20px 30px;
+    
+}
+.linkbox span{
+    position: absolute;
+    right:10px;
+    top:5px;
+    font-size: 30px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #d1d1d1;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 
 
