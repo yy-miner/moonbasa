@@ -1,9 +1,9 @@
-
+//轮播
 ; !function () {
     let $i = 0;
     let Timer;
     $(function () {
-        //自动轮播
+        //自动
         $(".picImg").eq(0).show().siblings().hide();
         TimerBanner();
 
@@ -34,10 +34,8 @@
 
 
 
-
+//商品渲染 :梦芭莎优选区块
 ; !function ($) {
-    //梦芭莎优选区块  商品渲染
-
     $.ajax({
         url: 'http://10.31.158.50/moonbasa/php/optimization.php',
         dataType: 'json'
@@ -60,3 +58,33 @@
     });
 }(jQuery);
 
+
+
+//楼梯效果
+; !function () {
+    const $loutinav = $('#louti');
+    const $louti = $('#loutinav a div');
+    const $louceng = $('.louceng');
+
+    $(window).on('scroll', function () {
+        let $scrollTop = $(window).scrollTop();
+        if ($scrollTop > 700) {
+            $loutinav.show();
+        } else {
+            $loutinav.hide();
+        }
+    });
+    $louti.not('.last').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let $lctop = $louceng.eq($(this).index()).offset().top;
+        $('html, body').animate({
+            scrollTop: $lctop
+        });
+    });
+
+    $('.last').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        });
+    });
+}
